@@ -1,0 +1,34 @@
+{
+  "name": "suhail-publisher",
+  "preferGlobal": "false",
+  "version": "0.0.1",
+  "author": "Lars Wolff <lars@synpro.io>",
+  "description": "watch xml-files, parse on change, publish needed infos",
+  "scripts": {
+    "start": "node index.js",
+    "test": "",
+    "predeploy": "echo This will be run before deploying the app",
+    "postdeploy": "echo This will be run after deploying the app"
+  },
+  "main": "./lib/http-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larsvegas/suhail-publisher.git"
+  },
+  "keywords": [
+    "cli",
+    "publisher",
+    "suhail"
+  ],
+  "dependencies" : {
+    "xml2js"   :  ">=0.2.0"
+  },
+  "analyze": false,
+  "devDependencies": {
+    "jasmine-node"    :  ">=1.0.26"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8"
+  }
+}         
