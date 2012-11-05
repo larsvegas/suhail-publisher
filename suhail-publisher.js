@@ -13,7 +13,11 @@ var SuhailParser = require('./lib/parsers/' + parserName).create();
 
 
 SuhailPublisher.watch(function parseContent(content) {
-	SuhailParser.parseContent(content, function publishParsedConten(data) {
+	var options = {
+		suhailStationId : config.suhailStationId,
+	}
+
+	SuhailParser.parseContent(content, options, function publishParsedConten(data) {
 		SuhailPublisher.publish(data);
 	})
 });
