@@ -1,0 +1,21 @@
+{
+	updated: null,
+	stationName: null,
+	suhailStationId: null,
+	current: {
+		startTime: null,
+		titleName: null,
+		artistName: null,
+		albumName: null,
+		year: null,
+		itemDurationMs : null,
+	},
+	next: {
+		startTime: null,
+		titleName: null,
+		artistName: null,
+		albumName: null,
+		year: null,
+		itemDurationMs : null,
+	}
+}
