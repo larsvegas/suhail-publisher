@@ -13,18 +13,18 @@ var SuhailParser = require('./lib/parsers/' + parserName).create();
 
 
 SuhailPublisher.watch(function parseContent(content) {
-	var options = {
-		suhailStationId : config.suhailStationId,
-	}
+  var options = {
+    suhailStationId : config.suhailStationId,
+  }
 
-	SuhailParser.parseContent(content, options, function publishParsedConten(data) {
-		SuhailPublisher.publish(data);
-	})
+  SuhailParser.parseContent(content, options, function publishParsedConten(data) {
+    SuhailPublisher.publish(data);
+  })
 });
 
 // termination
 process.on('exit', function () {
-	SuhailPublisher.unwatch();
+  SuhailPublisher.unwatch();
 });
 
 process.on('uncaughtException', function (err) {
