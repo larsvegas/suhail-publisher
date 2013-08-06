@@ -1,15 +1,15 @@
 {
-	"stationName": "STATION-NAME",
-	"suhailStationId": "SUHAIL-STATION-ID",
-	"file": "./tmp/file.suffix",
-	"fileEncoding" : "utf8",
-	"parser" : "PARSERNAME",
-	"watchPollTimeIntervall" : 5007,
-	"publisher" : {
-		"default" : "http",
-		"http" : {
-			"host" : "host.tld",
-			"path" : "/path/to/post/to",
-		}
-	}
+  "stationName": "STATION-NAME",
+  "suhailStationId": "SUHAIL-STATION-ID",
+  "file": "./tmp/file.suffix",
+  "fileEncoding" : "utf8",
+  "parser" : "PARSERNAME",
+  "watchPollTimeIntervall" : 5007,
+  "publisher" : {
+    "default" : "http",
+    "http" : {
+      "host" : "host.tld",
+      "path" : "/path/to/post/to",
+    }
+  }
 }
