@@ -18,6 +18,9 @@ SuhailPublisher.watch(function parseContent(content) {
   }
 
   SuhailParser.parseContent(content, options, function publishParsedConten(data) {
+    data = JSON.stringify(data);
+    data = JSON.parse(data);
+    ////console.log(data);
     SuhailPublisher.publish(data);
   })
 });
