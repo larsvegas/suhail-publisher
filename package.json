@@ -10,7 +10,7 @@
     "predeploy": "",
     "postdeploy": ""
   },
-  "main": "./lib/http-server",
+  "main": "./suhail-publisher.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/larsvegas/suhail-publisher.git"
