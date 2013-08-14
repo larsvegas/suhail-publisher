@@ -1,15 +1,15 @@
+"use strict"
+
 var fs = require('fs');
-var util = require('util');
+fs.existsSync('./config.json') || (function () { throw new Error('config.json does not exists') }());
 var config = JSON.parse(fs.readFileSync("./config.json"));
 var SuhailPublisher = require('./lib/suhail-publisher').create(config);
-//console.log(util.inspect(SuhailPublisher, true, 100));
 
 // configure parser
 // TODO: this shoud be an abstract factory
 var parserName = config.parser;
 fs.existsSync('./lib/parsers/' + parserName + '.js') || (function () { throw new Error('no such parser') }());
 var SuhailParser = require('./lib/parsers/' + parserName).create();
-//console.log(util.inspect(SuhailParser, true, 100));
 
 
 SuhailPublisher.watch(function parseContent(content) {
@@ -20,7 +20,6 @@ SuhailPublisher.watch(function parseContent(content) {
   SuhailParser.parseContent(content, options, function publishParsedConten(data) {
     data = JSON.stringify(data);
     data = JSON.parse(data);
-    ////console.log(data);
     SuhailPublisher.publish(data);
   })
 });
