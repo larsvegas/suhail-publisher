@@ -8,8 +8,8 @@
   "publisher" : {
     "default" : "http",
     "http" : {
-      "host" : "host.tld",
-      "path" : "/path/to/post/to",
+      "host" : "host.tld"
+      ,"path" : "/path/to/post/to"
     }
   }
 }
