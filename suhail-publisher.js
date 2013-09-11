@@ -1,5 +1,7 @@
 "use strict"
 
+process.title = "suhail: publisher";
+
 var fs = require('fs');
 fs.existsSync('./config.json') || (function () { throw new Error('config.json does not exists') }());
 var config = JSON.parse(fs.readFileSync("./config.json"));
