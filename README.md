@@ -27,3 +27,9 @@
   1. check your config-key "parser"
   1. check if the parse exists and is available
 
+
+## Developing
+
+Use jslint and add the jslint hook to your git repository
+
+    cp lib/git-pre-commit.sh .git/hooks/pre-commit
