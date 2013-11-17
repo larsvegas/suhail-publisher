@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 process.title = "suhail: publisher";
 
@@ -12,7 +12,6 @@ var SuhailPublisher = require('./lib/suhail-publisher').create(config);
 var parserName = config.parser;
 fs.existsSync('./lib/parsers/' + parserName + '.js') || (function () { throw new Error('no such parser') }());
 var SuhailParser = require('./lib/parsers/' + parserName).create();
-
 
 SuhailPublisher.watch(function parseContent(content) {
   var options = {
